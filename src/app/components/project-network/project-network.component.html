@@ -1,0 +1,11 @@
+<div *ngIf="lat != 200 && lon != 200">
+    <app-map
+    [lat]="lat" 
+    [lon]="lon" 
+    [markerActive]="true" 
+    [zoom]="15" 
+    [height]="300" 
+    [layers]="layers" 
+    (markerMovedEvent)="markerMoved($event)" 
+    ></app-map>
+</div>

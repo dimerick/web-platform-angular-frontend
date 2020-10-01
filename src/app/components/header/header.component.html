@@ -1,0 +1,46 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="assets/images/logo.png" width="112" height="28">
+      </a>
+  
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a [routerLink]="['/home']" [routerLinkActive]="['active']" class="navbar-item">
+          Home
+        </a>
+
+        <a [routerLink]="['/map']" [routerLinkActive]="['active']" class="navbar-item">
+          Mapa
+        </a>
+
+        <a [routerLink]="['/red-de-proyectos']" [routerLinkActive]="['active']" class="navbar-item">
+          Red de Proyectos
+        </a>
+  
+        <a [routerLink]="['/registro']" [routerLinkActive]="['active']" class="navbar-item">
+          Registro
+        </a>
+      </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-primary">
+              <strong>Sign up</strong>
+            </a>
+            <a class="button is-light">
+              Log in
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>

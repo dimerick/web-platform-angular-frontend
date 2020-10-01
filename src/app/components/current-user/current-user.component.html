@@ -1,0 +1,45 @@
+<div id="current-user">
+  
+  
+    <div *ngIf="!logged">
+        <div class="buttons">
+            <button class="button" (click)="openSignIn()">Sign in</button>
+            <button class="button is-success" (click)="openSignUp()">Sing up</button>
+    </div>
+
+</div>
+    <div *ngIf="logged" [ngClass]="{'hidden':userPanelActive}" class="current-user">
+        
+      <figure class="media-left">
+        <p class="image is-64x64">
+          <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
+        </p>
+      </figure>
+      
+      <span class="name-user">{{currentUser.name}}</span>
+      <a href="#" (click)="openUserPanel()">
+        <span class="icon">
+            <fa-icon [icon]="faAngleLeft" class="fa-2x"></fa-icon>
+        </span>
+        </a>
+        
+        
+    </div> 
+    
+
+</div>
+
+
+<app-signin [modalActive]="signInActive"
+    (eventSignInModalClose)="signInModalClose($event)"
+    ></app-signin>
+    
+    <!-- <app-signup [modalActive]="signUpActive"
+    (eventSignUpModalClose)="signUpModalClose($event)"
+    ></app-signup> -->
+
+<app-user-panel 
+[panelActive]="userPanelActive" 
+[currentUser]="currentUser" 
+(eventUserPanelClose)="closeUserPanel($event)"
+></app-user-panel>
